@@ -1,10 +1,13 @@
 import { Tabs, Tab } from "carbon-react/lib/components/tabs";
 
-export default function TabsBlock({ content }) {
+import RenderContent from './RenderContent';
+
+export default function TabsBlock({ part }) {
+  const { tabs } = part;
   return (
     <Tabs align="left" position="top">
-      {content &&
-        content.map((item, index) => (
+      {tabs &&
+        tabs.map((item, index) => (
           <Tab
             errorMessage="error"
             warningMessage="warning"
@@ -13,7 +16,7 @@ export default function TabsBlock({ content }) {
             key={`tab-${index}`}
             tabId={`tab-${index}`}
           >
-            {item.content}
+            <RenderContent content={item.content} />
           </Tab>
         ))}
     </Tabs>

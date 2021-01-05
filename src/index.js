@@ -1,14 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+const releaseNotesElement = document.getElementById("sds-release-notes");
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App parent={releaseNotesElement} />
   </React.StrictMode>,
-  document.getElementById('sds-release-notes')
+  releaseNotesElement
 );
 
 // If you want to start measuring performance in your app, pass a function

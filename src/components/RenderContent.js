@@ -1,22 +1,19 @@
-import TextBlock from './TextBlock';
-import TabsBlock from './TabsBlock';
+import RenderHTMLContent from "./RenderHTMLContent";
+import RenderMarkdownContent from "./RenderMarkdownContent";
 
-export default function RenderContent({ contentPart }) {
-    // Render nothing if no content
-    if (!contentPart) {
-      return null;
+export default function RenderContent({content}) {
+    if (!content) {
+        return null;
     }
-  
-    // Default render if just passed string
-    if (typeof contentPart === "string") {
-      return <TextBlock content={contentPart} />;
+
+    if (content.html || content.text) {
+        return <RenderHTMLContent content={content.html || content.text} />
     }
-  
-    switch (contentPart.component) {
-      case "tabs":
-        return <TabsBlock content={contentPart.content} />;
-      default:
-        return <TextBlock content={contentPart.content} />;
+
+    if (content.markdown) {
+        return <RenderMarkdownContent content={content.markdown} />
     }
-  }
-  
+
+
+    return null;
+}

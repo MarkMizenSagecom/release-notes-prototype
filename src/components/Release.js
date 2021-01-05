@@ -1,6 +1,6 @@
 import Heading from "carbon-react/lib/components/heading";
 
-import RenderContent from "./RenderContent";
+import Part from "./Part";
 
 function Release({ name, parts }) {
   return (
@@ -10,9 +10,7 @@ function Release({ name, parts }) {
       </header>
       <main>
         {parts &&
-          parts.map((part, index) => (
-            <RenderContent contentPart={part} key={index} />
-          ))}
+          parts.map((part, index) => <Part contentPart={part} key={index} />)}
       </main>
     </article>
   );

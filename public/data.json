@@ -1,0 +1,46 @@
+[
+  {
+    "id": "asfaldsfjh",
+    "name": "Test",
+    "content_parts": [
+      {
+        "component": "section",
+        "title": "Section heading",
+        "content": {
+          "html": "This is a test of the text content..."
+        }
+      },
+      {
+        "component": "tabs",
+        "tabs": [
+          {
+            "title": "Tab 1",
+            "content": {
+              "html": "This is the content for tab 1"
+            }
+          },
+          {
+            "title": "Tab 2",
+            "content": {
+              "html": "This is the content for tab 2"
+            }
+          }
+        ]
+      },
+      {
+        "component": "aside",
+        "title": "Aside title",
+        "content": {
+          "html": "This is the content for the aside..."
+        }
+      },
+      {
+        "component": "section",
+        "title": "Markdown Example",
+        "content": {
+          "markdown": "# This is a test\n\n another line \n\n - a list item \n - another list item"
+        }
+      }
+    ]
+  }
+]
