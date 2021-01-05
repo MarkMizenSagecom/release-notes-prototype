@@ -2,7 +2,7 @@ import RenderHTMLContent from "./RenderHTMLContent";
 import TabsBlock from "./TabsBlock";
 import AsideBlock from "./AsideBlock";
 import SectionBlock from "./SectionBlock";
-import MarkdownBlock from "./RenderMarkdownContent";
+import AccordionBlock from "./AccordionBlock";
 
 export default function Part({ contentPart }) {
   // Render nothing if no content
@@ -18,6 +18,8 @@ export default function Part({ contentPart }) {
   switch (contentPart.component) {
     case "tabs":
       return <TabsBlock part={contentPart} />;
+    case "accordion":
+      return <AccordionBlock part={contentPart} />;
     case "aside":
       return <AsideBlock part={contentPart} />;
     default:
