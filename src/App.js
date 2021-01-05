@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Release from "./components/Release";
 
 function App() {
+  const releases = [
+    {
+      id: "asfaldsfjh",
+      name: "Test",
+      content_parts: [
+        {
+          component: "text",
+          content: "This is a test of the text content...",
+        },
+        {
+          component: "tabs",
+          content: [
+            {
+              title: "Tab 1",
+              content: "This is the content for tab 1",
+            },
+            {
+              title: "Tab 2",
+              content: "This is the content for tab 2",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {releases.map(({ id, name, content_parts }) => (
+        <Release key={id} name={name} parts={content_parts} />
+      ))}
     </div>
   );
 }

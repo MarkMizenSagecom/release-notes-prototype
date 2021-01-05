@@ -24,11 +24,45 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900"
+      rel="stylesheet"
+    />
+
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div
+      id="sds-release-notes"
+      data-content="[
+      {
+        id: 'asfaldsfjh',
+        name: 'Test',
+        content_parts: [
+          {
+            component: 'text',
+            content: 'This is a test of the text content...',
+          },
+          {
+            component: 'tabs',
+            content: [
+              {
+                title:'Tab 1',
+                content: 'This is the content for tab 1',
+              },
+              {
+                title: 'Tab 2',
+                content: 'This is the content for tab 2',
+              },
+            ],
+          },
+        ],
+      },
+    ]"
+    ></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
