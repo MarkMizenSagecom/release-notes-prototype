@@ -65,6 +65,13 @@
           }
         }
       ]
+    },
+    {
+      "id": "random-string-here",
+      "name": "Test Release 2",
+      "content_parts": [
+        "This is a test of a realy basic release..."
+      ]
     }
   ]
 }
